@@ -1,0 +1,19 @@
+//pragma ever-solidity  ^0.66.0;
+pragma ever-solidity  ^0.70.0;
+
+
+import 'IAlice.tsol';
+
+contract Alice is IAlice {
+
+    // constructor() public {
+    constructor() {
+        tvm.accept();
+    }
+
+    function hello() external override {
+        tvm.accept();
+
+        tvm.log("Hello world");
+    }
+}
